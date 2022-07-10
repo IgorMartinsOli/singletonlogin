@@ -13,6 +13,7 @@ public class Login {
     private static Login contaLogada;
     private String name;
     private String password;
+    private static final GenerateChars generate = new GenerateChars();
     
     private Login(String name, String password){
         this.name = name;

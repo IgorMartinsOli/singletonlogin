@@ -15,14 +15,13 @@ public class GenerateChars {
     public String generate(){
     Random random = new Random();
     String setOfCharacters = "abcdefghijklmnopqrstuvxyz1234567890!#%&-/@";
-    String cod = null;
+    String cod = "";
     
     for(int i = 0; i < 6; i++){
         int randomInt = random.nextInt(setOfCharacters.length());
         char randomChar = setOfCharacters.charAt(randomInt);
         cod = (cod+""+randomChar);
     }
-    System.out.println(cod);
     return cod;
     }
     

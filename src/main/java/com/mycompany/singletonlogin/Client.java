@@ -13,7 +13,15 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String name;
+        String aux;
+        GenerateChars generate = new GenerateChars();
+        String codigo = generate.generate();
+        
+        System.out.println("Digite o codigo: "+codigo);
+        aux = scan.next();
+        
+        if(aux == null ? codigo == null : aux.equals(codigo)){
+            String name;
         String password;
         
         System.out.println("Digite seu nome");
@@ -33,5 +41,8 @@ public class Client {
         }
         
         Login.logar("teste1", "teste2");
+        }else{
+            System.out.println("Codigo incorreto: "+aux+", "+codigo);
+        }
     }
 }
